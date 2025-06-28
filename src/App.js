@@ -11,6 +11,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import NotFound from './pages/NotFound';
 import Settings from './pages/Settings';
 import About from './pages/About';
+import Profile from './pages/Profile';
 
 function App() {
   const { currentUser } = useAuth();
@@ -26,6 +27,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
