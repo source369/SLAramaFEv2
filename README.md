@@ -49,7 +49,7 @@ The application will open in your default browser at `http://localhost:3000`.
 
 
 
-Screeens 
+Screens 
 - Login 
 ![image](https://github.com/user-attachments/assets/15681816-5026-4ae4-9743-b622719af371)
 
