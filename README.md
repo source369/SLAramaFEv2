@@ -52,13 +52,9 @@ The application will open in your default browser at `http://localhost:3000`.
 Screeens 
 - Login 
 ![image](https://github.com/user-attachments/assets/15681816-5026-4ae4-9743-b622719af371)
-
-
 - General User Demo
 ![image](https://github.com/user-attachments/assets/03c348ef-624b-459f-a225-eb15cbd4afd4)
-
 - Admin User Demo
 ![image](https://github.com/user-attachments/assets/c02099b2-711c-4358-8bfc-88c146948fae)
-
 - Owner 
 ![image](https://github.com/user-attachments/assets/750ba694-0258-4e5c-ae96-62c2e1e5cea1)
