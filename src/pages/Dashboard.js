@@ -69,7 +69,7 @@ const AdminStatCard = ({ title, value, icon, color, subtext }) => (
 );
 
 function Dashboard() {
-  const { currentUser, isAdmin, isOwner } = useAuth();
+  const { currentUser, isResident, isChief } = useAuth();
 
   // Components for different roles
   const GeneralUserDashboard = () => (
@@ -467,9 +467,9 @@ function Dashboard() {
   // Render dashboard based on user role
   return (
     <Box sx={{ py: 2 }}>
-      {isOwner ? (
+      {isChief ? (
         <OwnerDashboard />
-      ) : isAdmin ? (
+      ) : isResident ? (
         <AdminDashboard />
       ) : (
         <GeneralUserDashboard />

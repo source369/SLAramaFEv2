@@ -1,6 +1,6 @@
 # SLAramaFEv2
 
-A professional React web application with role-based access control for general users, admins, and owners.
+A React application used to manage monk registrations and stay requests at Sri Lankaramaya Temple. It demonstrates role-based access control for visiting monks, resident monks and the chief monk.
 
 ## Features
 
@@ -11,9 +11,9 @@ A professional React web application with role-based access control for general 
 
 ## User Roles
 
-- General Users: Basic access to the dashboard
-- Admins: Extended access with administrative features
-- Owners: Full access to all features and settings
+- Visiting Monks: Basic dashboard access with ability to request stays
+- Resident Monks: Review and approve registrations and stay requests
+- Chief Monk: Full control including administration of resident monks
 
 ## Getting Started
 

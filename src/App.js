@@ -11,6 +11,11 @@ import ProtectedRoute from './components/ProtectedRoute';
 import NotFound from './pages/NotFound';
 import Settings from './pages/Settings';
 import About from './pages/About';
+import Register from './pages/Register';
+import StayRequest from './pages/StayRequest';
+import MyStays from './pages/MyStays';
+import ManageRegistrations from './pages/ManageRegistrations';
+import ManageStays from './pages/ManageStays';
 
 function App() {
   const { currentUser } = useAuth();
@@ -21,9 +26,14 @@ function App() {
       <Routes>
         <Route path="/login" element={!currentUser ? <Login /> : <Navigate to="/dashboard" />} />
         <Route path="/" element={!currentUser ? <Navigate to="/login" /> : <Navigate to="/dashboard" />} />
+        <Route path="/register" element={<Register />} />
 
         <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/stay-request" element={<StayRequest />} />
+          <Route path="/my-stays" element={<MyStays />} />
+          <Route path="/manage-registrations" element={<ManageRegistrations />} />
+          <Route path="/manage-stays" element={<ManageStays />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/about" element={<About />} />
         </Route>

@@ -52,16 +52,16 @@ function Login() {
       let demoEmail, demoPassword;
 
       switch (userType) {
-        case 'admin':
-          demoEmail = 'admin@example.com';
+        case 'resident':
+          demoEmail = 'resident@example.com';
           demoPassword = 'password';
           break;
-        case 'owner':
-          demoEmail = 'owner@example.com';
+        case 'chief':
+          demoEmail = 'chief@example.com';
           demoPassword = 'password';
           break;
-        default: // general user
-          demoEmail = 'user@example.com';
+        default: // visiting
+          demoEmail = 'visiting@example.com';
           demoPassword = 'password';
           break;
       }
@@ -144,29 +144,29 @@ function Login() {
           </Typography>
 
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 1 }}>
-            <Button 
-              size="small" 
-              variant="outlined" 
-              onClick={() => handleDemoLogin('user')}
+            <Button
+              size="small"
+              variant="outlined"
+              onClick={() => handleDemoLogin('visiting')}
               disabled={loading}
             >
-              User Demo
+              Visiting Demo
             </Button>
-            <Button 
-              size="small" 
-              variant="outlined" 
-              onClick={() => handleDemoLogin('admin')}
+            <Button
+              size="small"
+              variant="outlined"
+              onClick={() => handleDemoLogin('resident')}
               disabled={loading}
             >
-              Admin Demo
+              Resident Demo
             </Button>
-            <Button 
-              size="small" 
-              variant="outlined" 
-              onClick={() => handleDemoLogin('owner')}
+            <Button
+              size="small"
+              variant="outlined"
+              onClick={() => handleDemoLogin('chief')}
               disabled={loading}
             >
-              Owner Demo
+              Chief Demo
             </Button>
           </Box>
         </Box>
@@ -177,13 +177,16 @@ function Login() {
           Demo credentials:
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          User: user@example.com / password
+          Visiting Monk: visiting@example.com / password
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Admin: admin@example.com / password
+          Resident Monk: resident@example.com / password
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Owner: owner@example.com / password
+          Chief Monk: chief@example.com / password
+        </Typography>
+        <Typography variant="body2" sx={{ mt: 2 }}>
+          <Link href="/register">New visiting monk? Register here</Link>
         </Typography>
       </Box>
     </Container>
