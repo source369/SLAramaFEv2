@@ -29,6 +29,8 @@ import {
   People as PeopleIcon,
   AdminPanelSettings as AdminIcon,
   BusinessCenter as BusinessIcon,
+  AssignmentTurnedIn as AssignmentIcon,
+  AccessTime as TimeIcon,
 } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -130,10 +132,11 @@ function Layout() {
 
   // Navigation items for different user roles
   const navItems = [
-    { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard', roles: ['user', 'admin', 'owner'] },
-    { text: 'User Management', icon: <PeopleIcon />, path: '/users', roles: ['admin', 'owner'] },
-    { text: 'Admin Panel', icon: <AdminIcon />, path: '/admin', roles: ['admin', 'owner'] },
-    { text: 'Business Settings', icon: <BusinessIcon />, path: '/business', roles: ['owner'] },
+    { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard', roles: ['visiting', 'resident', 'chief'] },
+    { text: 'New Stay Request', icon: <AssignmentIcon />, path: '/stay-request', roles: ['visiting'] },
+    { text: 'My Stay Requests', icon: <TimeIcon />, path: '/my-stays', roles: ['visiting'] },
+    { text: 'Manage Registrations', icon: <PeopleIcon />, path: '/manage-registrations', roles: ['resident', 'chief'] },
+    { text: 'Manage Stays', icon: <AdminIcon />, path: '/manage-stays', roles: ['resident', 'chief'] },
   ];
 
   return (
